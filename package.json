@@ -1,14 +1,17 @@
 {
   "name": "@ibm/telemetry-config-schema",
-  "version": "0.1.0",
   "description": "Config file schema and associated utilities for IBM Telemetry",
-  "scripts": {
-    "build": "tsc",
-    "build:schema": "ts-json-schema-generator --path ./src/main/schema.ts --type Schema > dist/telemetry-config.schema.json",
-    "clean": "rimraf dist",
-    "lint": "scripts/lint",
-    "lint:fix": "scripts/lint_and_fix"
-  },
+  "version": "0.1.0",
+  "license": "Apache-2.0",
+  "author": "IBM",
+  "keywords": [
+    "ibm",
+    "telemetry",
+    "schema",
+    "yaml",
+    "opentelemetry"
+  ],
+  "type": "module",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -19,16 +22,13 @@
   "files": [
     "dist/"
   ],
-  "type": "module",
-  "keywords": [
-    "ibm",
-    "telemetry",
-    "schema",
-    "yaml",
-    "opentelemetry"
-  ],
-  "author": "IBM",
-  "license": "Apache-2.0",
+  "scripts": {
+    "build": "tsc",
+    "build:schema": "ts-json-schema-generator --path ./src/main/schema.ts --type Schema > dist/telemetry-config.schema.json",
+    "clean": "rimraf dist",
+    "lint": "scripts/lint",
+    "lint:fix": "scripts/lint_and_fix"
+  },
   "devDependencies": {
     "@commitlint/cli": "^18.0.0",
     "@commitlint/config-conventional": "^18.0.0",

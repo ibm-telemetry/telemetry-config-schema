@@ -1,0 +1,62 @@
+name: CI Checks
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+#
+# Limit workflow to a single running instance at a time
+#
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  #
+  # Ensure all files pass linting
+  #
+  lint:
+    name: Prettier, ESLint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎
+        uses: actions/checkout@v4
+
+      - name: Setup Node 🏗
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Install Node Modules 🔧
+        run: |
+          npm install
+
+      - name: Lint 🔎
+        run: npm run lint
+
+  #
+  # Ensure the package builds properly
+  #
+  build:
+    name: Build package
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎
+        uses: actions/checkout@v4
+
+      - name: Setup Node 🏗
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Install Node Modules 🔧
+        run: npm install
+
+      - name: Build 🔨
+        run: |
+          npm run build:schema
+          npm run build

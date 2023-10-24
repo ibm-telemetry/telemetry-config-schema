@@ -1,0 +1,23 @@
+name: Release Please
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  release-please:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Update release PR 🔄
+        uses: google-github-actions/release-please-action@v3
+        with:
+          release-type: node
+          draft-pull-request: true
+          package-name: '@ibm/telemetry-config-schema'
+          pull-request-title-pattern: 'release${scope}: release${component} ${version}'
+
+    # TODO: npm publication https://github.com/google-github-actions/release-please-action#automating-publication-to-npm

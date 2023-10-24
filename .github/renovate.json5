@@ -1,0 +1,32 @@
+{
+  $schema: 'https://docs.renovatebot.com/renovate-schema.json',
+  extends: [
+    'config:base',
+    // https://docs.renovatebot.com/presets-npm/#npmunpublishsafe
+    'npm:unpublishSafe',
+
+    // https://docs.renovatebot.com/presets-schedule/#scheduledaily
+    'schedule:earlyMondays'
+  ],
+  // Release Please does not consider `deps:` to be releasable units
+  commitMessagePrefix: 'fix(deps):',
+  commitMessageAction: 'upgrade',
+  // Tell dependency dashboard to only require PR creation approval for major versions
+  major: {
+    dependencyDashboardApproval: true
+  },
+  packageRules: [
+    {
+      matchDepTypes: ['dependencies'],
+      matchUpdateTypes: ['minor', 'patch'],
+      groupName: 'dependencies (minor)'
+    },
+    {
+      matchDepTypes: ['devDependencies'],
+      matchUpdateTypes: ['minor', 'patch'],
+      groupName: 'devDependencies (minor)'
+    }
+  ],
+  // Move package.json forward along with package-lock.json
+  rangeStrategy: 'bump'
+}
