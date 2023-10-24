@@ -58,5 +58,5 @@ jobs:
 
       - name: Build 🔨
         run: |
-          npm run build:schema
           npm run build
+          npm run build:schema
