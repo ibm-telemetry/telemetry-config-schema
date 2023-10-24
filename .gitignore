@@ -1,0 +1,18 @@
+# npm
+node_modules/
+
+# Typescript output
+dist/
+
+# Generated stuff
+.test-coverage/
+
+# OS stuff
+.DS_Store
+
+# IDE stuff
+.vscode/
+.history/
+
+# Dotenv stuff
+.env

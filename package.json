@@ -1,0 +1,54 @@
+{
+  "name": "@ibm/telemetry-config-schema",
+  "version": "0.1.0",
+  "description": "Config file schema and associated utilities for IBM Telemetry",
+  "scripts": {
+    "build": "tsc",
+    "build:schema": "ts-json-schema-generator --path ./src/main/schema.ts --type Schema > dist/telemetry-config.schema.json",
+    "clean": "rimraf dist",
+    "lint": "scripts/lint",
+    "lint:fix": "scripts/lint_and_fix"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./schema.json": "./dist/telemetry-config.schema.json"
+  },
+  "files": [
+    "dist/"
+  ],
+  "type": "module",
+  "keywords": [
+    "ibm",
+    "telemetry",
+    "schema",
+    "yaml",
+    "opentelemetry"
+  ],
+  "author": "IBM",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@commitlint/cli": "^18.0.0",
+    "@commitlint/config-conventional": "^18.0.0",
+    "@types/node": "^20.8.8",
+    "@typescript-eslint/eslint-plugin": "^6.9.0",
+    "eslint": "^8.52.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-config-standard-with-typescript": "^39.1.1",
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-jsdoc": "^46.8.2",
+    "eslint-plugin-n": "^16.2.0",
+    "eslint-plugin-notice": "^0.9.10",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.0.2",
+    "prettier": "^3.0.3",
+    "rimraf": "^5.0.5",
+    "ts-json-schema-generator": "^1.4.0",
+    "typescript": "^5.2.2"
+  }
+}
