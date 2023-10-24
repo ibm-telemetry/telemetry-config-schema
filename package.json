@@ -11,6 +11,17 @@
     "yaml",
     "opentelemetry"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "homepage": "https://github.com/ibm-telemetry/telemetry-config-schema#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ibm-telemetry/telemetry-config-schema.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ibm-telemetry/telemetry-config-schema/issues"
+  },
   "type": "module",
   "exports": {
     ".": {
