@@ -27,7 +27,8 @@
     "build:schema": "ts-json-schema-generator --path ./src/main/schema.ts --type Schema > dist/telemetry-config.schema.json",
     "clean": "rimraf dist",
     "lint": "scripts/lint",
-    "lint:fix": "scripts/lint_and_fix"
+    "lint:fix": "scripts/lint_and_fix",
+    "prepare": "husky install"
   },
   "devDependencies": {
     "@commitlint/cli": "^18.0.0",
