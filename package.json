@@ -25,17 +25,17 @@
   "type": "module",
   "exports": {
     ".": {
-      "types": "./dist/main/schema.d.ts",
-      "default": "./dist/main/schema.js"
+      "types": "./dist/main/config-schema.d.ts",
+      "default": "./dist/main/config-schema.js"
     },
-    "./schema.json": "./dist/telemetry-config.schema.json"
+    "./config.schema.json": "./dist/config.schema.json"
   },
   "files": [
     "dist/"
   ],
   "scripts": {
     "build": "tsc",
-    "build:schema": "ts-json-schema-generator --path ./src/main/schema.ts --type Schema > dist/telemetry-config.schema.json",
+    "build:schema": "ts-json-schema-generator --path ./src/main/config-schema.ts --type ConfigSchema > dist/config.schema.json",
     "clean": "rimraf dist",
     "lint": "scripts/lint",
     "lint:fix": "scripts/lint_and_fix",

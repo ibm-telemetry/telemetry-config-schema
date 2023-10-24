@@ -11,7 +11,7 @@
  * @title Telemetry Config Schema
  * @id https://[HOSTHERE]/schemas/telemetry-config.schema.json
  */
-export interface Schema {
+export interface ConfigSchema {
   /**
    * Current schema version.
    */
