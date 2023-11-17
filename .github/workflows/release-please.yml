@@ -21,6 +21,7 @@ jobs:
 
       - name: Update release PR 🔄
         uses: google-github-actions/release-please-action@v3
+        id: release
         with:
           release-type: node
           draft-pull-request: true
@@ -28,4 +29,33 @@ jobs:
           pull-request-title-pattern: 'release${scope}: release${component} ${version}'
           token: ${{ steps.app-token.outputs.token }}
 
-    # TODO: npm publication https://github.com/google-github-actions/release-please-action#automating-publication-to-npm
+        #
+        # The logic below handles npm publication
+        #
+      - name: Checkout 🛎
+        uses: actions/checkout@v4
+        if: ${{ steps.release.outputs.release_created }}
+
+      - name: Setup Node 🏗
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+          cache: 'npm'
+          registry-url: 'https://registry.npmjs.org'
+        if: ${{ steps.release.outputs.release_created }}
+
+      - name: Install Node Modules 🔧
+        run: npm install
+        if: ${{ steps.release.outputs.release_created }}
+
+      - name: Build 🔨
+        run: |
+          npm run build
+          npm run build:schema
+        if: ${{ steps.release.outputs.release_created }}
+
+      - name: Publish 🚀
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPMJS_PUBLISH_TOKEN}}
+        if: ${{ steps.release.outputs.release_created }}
