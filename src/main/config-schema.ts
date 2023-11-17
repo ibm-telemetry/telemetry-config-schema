@@ -9,7 +9,7 @@
  * Configuration outline for metrics collection using IBM telemetry.
  *
  * @title Telemetry Config Schema
- * @id https://[HOSTHERE]/schemas/telemetry-config.schema.json
+ * @id https://unpkg.com/@ibm/telemetry-config-schema/dist/config.schema.json
  */
 export interface ConfigSchema {
   /**
@@ -20,6 +20,10 @@ export interface ConfigSchema {
    * Unique identifier assigned on a per-project basis.
    */
   projectId: string
+  /**
+   * URL of the telemetry data collection endpoint.
+   */
+  endpoint: string
   /**
    * The keys under `collect` represent the various types of data that Telemetry is capable of
    * collecting (i.e. `scopes`).
