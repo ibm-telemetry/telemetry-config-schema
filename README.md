@@ -103,7 +103,7 @@ npm:
   dependencies: null
 ```
 
-## Jsx schema
+## JSX schema
 
 Determines configuration for jsx scope collection.
 
