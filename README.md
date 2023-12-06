@@ -80,9 +80,9 @@ collect:
 | Key   | Description                                                                                                       | Required | Type   |
 | ----- | ----------------------------------------------------------------------------------------------------------------- | -------- | ------ |
 | `npm` | Configuration for collecting telemetry data from an npm environment. See [npm schema](#npm-schema) for more info. | Optional | Object |
-| `jsx` | Configuration for collecting telemetry data from JSX files. See [jsx schema](#jsx-schema) for more info.          | Optional | Object |
+| `jsx` | Configuration for collecting telemetry data from JSX files. See [JSX schema](#jsx-schema) for more info.          | Optional | Object |
 
-## Npm schema
+## npm schema
 
 Determines configuration for npm scope collection.
 
@@ -103,11 +103,11 @@ npm:
   dependencies: null
 ```
 
-## Jsx schema
+## JSX schema
 
-Determines configuration for jsx scope collection.
+Determines configuration for JSX scope collection.
 
-The jsx scope captures (jsx) element-specific usage data for the instrumented package. Specifically:
+The JSX scope captures (JSX) element-specific usage data for the instrumented package. Specifically:
 
 - All elements exported through the instrumented package that are being used in a given project that
   installed the package.
@@ -115,7 +115,7 @@ The jsx scope captures (jsx) element-specific usage data for the instrumented pa
   `allowedAttributeStringValues` config options defined below.
 - Import paths used to access the instrumented package's exported elements.
 
-The jsx config object has a single required `elements` key. This is an object that may be left empty
+The JSX config object has a single required `elements` key. This is an object that may be left empty
 or can contain any of the following keys:
 
 - `allowedAttributeNames`: This is an _optional_ array of String.
@@ -134,7 +134,7 @@ or can contain any of the following keys:
 
   At least one value is required if this key is defined.
 
-The `elements` key **must** be present inside the jsx config if jsx scope data is to be collected:
+The `elements` key **must** be present inside the jsx config if JSX scope data is to be collected:
 
 ```yaml path="sample-telemetry.yml"
 ---
