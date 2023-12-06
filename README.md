@@ -115,7 +115,7 @@ The jsx scope captures (jsx) element-specific usage data for the instrumented pa
   `allowedAttributeStringValues` config options defined below.
 - Import paths used to access the instrumented package's exported elements.
 
-The jsx config object has a single required `elements` key. This is an object that may be left empty
+The JSX config object has a single required `elements` key. This is an object that may be left empty
 or can contain any of the following keys:
 
 - `allowedAttributeNames`: This is an _optional_ array of String.
