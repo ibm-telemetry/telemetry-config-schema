@@ -105,7 +105,7 @@ npm:
 
 ## JSX schema
 
-Determines configuration for jsx scope collection.
+Determines configuration for JSX scope collection.
 
 The jsx scope captures (jsx) element-specific usage data for the instrumented package. Specifically:
 
