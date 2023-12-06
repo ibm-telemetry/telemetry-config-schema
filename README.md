@@ -14,7 +14,7 @@ The current supported stable version of the config schema is _v1_. You can add t
 server to your YAML files by adding the following line to the top of your files:
 
 ```yml
-# yaml-language-server: $schema=https://unpkg.com/@ibm/telemetry-config-schema@0.2.0/dist/config.schema.json
+# yaml-language-server: $schema=https://unpkg.com/@ibm/telemetry-config-schema@0.3.0/dist/config.schema.json
 ```
 
 **_Note:_** If you're using VS Code as your editor you may
@@ -32,7 +32,7 @@ language support such as validation and auto–complete.
 | `collect`   | Object containing one or more scopes to collect for. See [collect schema](#collect-schema) for more info.   | Required | Object |
 
 ```yaml path="sample-telemetry.yml"
-# yaml-language-server: $schema=https://unpkg.com/@ibm/telemetry-config-schema@0.2.0/dist/config.schema.json
+# yaml-language-server: $schema=https://unpkg.com/@ibm/telemetry-config-schema@0.3.0/dist/config.schema.json
 version: 1
 projectId: 'project id'
 endpoint: 'http://localhost:3000/v1/metrics'
