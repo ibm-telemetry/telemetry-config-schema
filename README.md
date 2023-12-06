@@ -1,6 +1,7 @@
 # IBM Telemetry config file schema
 
-This repository contains the configuration file schema for IBM Telemetry.
+This repository contains the configuration file schema for
+[IBM Telemetry](https://github.com/ibm-telemetry/telemetry-js/tree/main?tab=readme-ov-file#ibm-telemetry-js).
 
 IBM Telemetry's config file schema is applied through metadata files written in YAML. If you're new
 to YAML and want to learn more, see
@@ -40,15 +41,15 @@ collect:
     dependencies: null
   jsx:
     elements:
-    allowedAttributeNames:
-      - 'size'
-      - 'title'
-    allowedAttributeStringValues:
-      - 'small'
-      - 'medium'
-      - 'large'
-      - 'title1'
-      - 'title2'
+      allowedAttributeNames:
+        - 'size'
+        - 'title'
+      allowedAttributeStringValues:
+        - 'small'
+        - 'medium'
+        - 'large'
+        - 'title1'
+        - 'title2'
 ```
 
 ## Collect schema
@@ -88,9 +89,9 @@ Determines configuration for npm scope collection.
 The npm scope captures data relating to the instrumented package's installer(s) and dependencies
 installed alongside it. Specifically:
 
-- Packages (name and version) that installed the instrumented package at the specified
+- Projects (name and version) that installed the instrumented package at the specified
   (instrumented) version.
-- Packages (name and version) that are installed along with the instrumented package at the
+- Projects (name and version) that are installed along with the instrumented package at the
   specified (instrumented) version.
 
 The npm config object has a single required `dependencies` key that takes a `null` value. This key
@@ -109,10 +110,10 @@ Determines configuration for jsx scope collection.
 The jsx scope captures (jsx) element-specific usage data for the instrumented package. Specifically:
 
 - All elements exported through the instrumented package that are being used in a given project that
-  installed the package
+  installed the package.
 - Element configurations (attributes and values), as determined by the `allowedAttributeNames` and
-  `allowedAttributeStringValues` config options. See [jsx keys](#jsx-keys) for more info.
-- Import paths used to access the instrumented package's exported elements
+  `allowedAttributeStringValues` config options defined below.
+- Import paths used to access the instrumented package's exported elements.
 
 The jsx config object has a single required `elements` key. This is an object that may be left empty
 or can contain any of the following keys:
