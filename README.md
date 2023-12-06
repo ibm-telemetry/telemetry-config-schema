@@ -107,7 +107,7 @@ npm:
 
 Determines configuration for JSX scope collection.
 
-The jsx scope captures (jsx) element-specific usage data for the instrumented package. Specifically:
+The JSX scope captures (JSX) element-specific usage data for the instrumented package. Specifically:
 
 - All elements exported through the instrumented package that are being used in a given project that
   installed the package.
