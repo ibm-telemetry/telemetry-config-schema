@@ -105,7 +105,9 @@ npm:
 
 ## JSX schema
 
-Determines configuration for JSX scope collection.
+Determines configuration for JSX scope collection. This scope is only applicable to React packages,
+if the package you're instrumenting does not export React components please omit this key from your
+config file.
 
 The JSX scope captures (JSX) element-specific usage data for the instrumented package. Specifically:
 
