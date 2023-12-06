@@ -82,7 +82,7 @@ collect:
 | `npm` | Configuration for collecting telemetry data from an npm environment. See [npm schema](#npm-schema) for more info. | Optional | Object |
 | `jsx` | Configuration for collecting telemetry data from JSX files. See [jsx schema](#jsx-schema) for more info.          | Optional | Object |
 
-## Npm schema
+## npm schema
 
 Determines configuration for npm scope collection.
 
