@@ -134,7 +134,7 @@ or can contain any of the following keys:
 
   At least one value is required if this key is defined.
 
-The `elements` key **must** be present inside the jsx config if jsx scope data is to be collected:
+The `elements` key **must** be present inside the jsx config if JSX scope data is to be collected:
 
 ```yaml path="sample-telemetry.yml"
 ---
