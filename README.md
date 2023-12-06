@@ -80,7 +80,7 @@ collect:
 | Key   | Description                                                                                                       | Required | Type   |
 | ----- | ----------------------------------------------------------------------------------------------------------------- | -------- | ------ |
 | `npm` | Configuration for collecting telemetry data from an npm environment. See [npm schema](#npm-schema) for more info. | Optional | Object |
-| `jsx` | Configuration for collecting telemetry data from JSX files. See [jsx schema](#jsx-schema) for more info.          | Optional | Object |
+| `jsx` | Configuration for collecting telemetry data from JSX files. See [JSX schema](#jsx-schema) for more info.          | Optional | Object |
 
 ## npm schema
 
