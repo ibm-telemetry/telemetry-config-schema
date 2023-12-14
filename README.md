@@ -14,7 +14,7 @@ The current supported stable version of the config schema is _v1_. You can add t
 server to your YAML files by adding the following line to the top of your files:
 
 ```yml
-# yaml-language-server: $schema=https://unpkg.com/@ibm/telemetry-config-schema@v0/dist/config.schema.json
+# yaml-language-server: $schema=https://unpkg.com/@ibm/telemetry-config-schema@v1/dist/config.schema.json
 ```
 
 **_Note:_** If you're using VS Code as your editor you may
@@ -37,7 +37,7 @@ language support such as validation and auto–complete.
 # yaml-language-server: $schema=https://unpkg.com/@ibm/telemetry-config-schema@v1/dist/config.schema.json
 version: 1
 projectId: 'project id'
-endpoint: 'http://example.com/v1/metrics'
+endpoint: 'https://example.com/v1/metrics'
 collect:
   npm:
     dependencies:
@@ -56,13 +56,14 @@ collect:
 
 ## Collect schema
 
-The keys under `collect` represent the various types of data that Telemetry is capable of collecting
-(i.e. `scopes`).
+The keys under `collect` represent the various "scopes" that IBM Telemetry understands (e.g. `jsx`).
+Each "scope" contains one or more "metrics" that can be collected for that scope (e.g.
+`jsx.elements`). Each "metric" contains zero or more configuration options for that metric (e.g.
+`jsx.elements.allowedAttributeNames`).
 
 > **Note**: At least one scope is required.
 
 ```yaml
----
 collect:
   npm:
     dependencies:
@@ -137,23 +138,23 @@ This data can help you answer questions such as:
 - How many times does "project x" use my exported Button element?
 
 By default, the `jsx.elements` metrics will collect element names, anonymized element attribute
-names, and anonymized element attribute values. Boolean and numeric attribute values are always
-collected in plain text. The following config options allow certain string values to be collected in
-plain text (instead of as anonymized strings).
+names, and anonymized element attribute values. The following config options allow certain
+additional values to be collected in plain text (instead of as anonymized values).
 
 - `allowedAttributeNames`: This is an _optional_ array of strings.
 
   Enables plain-text collection of specific JSX attribute names (prop names). These are collected
-  for all discovered JSX elements imported from the instrumented package.
+  for all discovered JSX elements imported from the instrumented package. Additionally, boolean and
+  numeric values for these attributes will be collected in plain text.
 
-  At least one string value is required if this key is defined.
+  _At least one string value is required if this key is defined._
 
 - `allowedAttributeStringValues`: This is an _optional_ array of strings.
 
-  Enables plain-text collection of specific JSX attribute values (prop values). These are collected
-  for discovered JSX attributes included in the `allowedAttributeNames` list.
+  Enables plain-text collection of specific JSX attribute string values (prop values). These are
+  collected for discovered JSX attributes included in the `allowedAttributeNames` list.
 
-  At least one value is required if this key is defined.
+  _At least one value is required if this key is defined._
 
 ### Sample:
 
