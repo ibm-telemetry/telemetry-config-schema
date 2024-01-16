@@ -1,9 +1,10 @@
 /*
- * Copyright IBM Corp. 2022, 2023
+ * Copyright IBM Corp. 2022, 2024
  *
  * This source code is licensed under the Apache-2.0 license found in the
  * LICENSE file in the root directory of this source tree.
  */
+import { execSync } from 'child_process'
 import fs from 'fs'
 import path from 'path'
 
@@ -113,21 +114,41 @@ function processFile(packageJsonPath) {
   }
 }
 
+function findFiles() {
+  const files = execSync('git ls-tree -r --name-only HEAD')
+    .toString()
+    .split('\n')
+    .map((f) => f.trim())
+    .filter((f) => f !== '')
+    .filter((f) => f.endsWith('package.json'))
+    .filter((f) => {
+      try {
+        fs.accessSync(f)
+        return true
+      } catch {
+        return false
+      }
+    })
+
+  return files
+}
+
 //
 // Start of script
 //
-const args = process.argv.slice(2)
+let args = process.argv.slice(2)
 const fixArgIndex = args.indexOf('--fix')
 let fix = false
 let hasError = false
 
+// Find and extract fix arg, if provided
 if (fixArgIndex >= 0) {
   fix = true
   args.splice(fixArgIndex, 1)
 }
 
 if (args.length <= 0) {
-  throw new Error('Must specify at least one package.json path')
+  args = findFiles()
 }
 
 for (const arg of args) {
