@@ -172,3 +172,8 @@ jsx:
       - 'title1'
       - 'title2'
 ```
+
+**_Note:_** You can use the
+[IBM Telemetry Js Config Generator](https://www.npmjs.com/package/@ibm/telemetry-js-config-generator)
+script to automatically generate a config file with these values. Remember to verify that the
+generated output is correct before using the config file.
