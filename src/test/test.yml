@@ -11,7 +11,7 @@ collect:
         - 'one'
         - 'two'
   js:
-    functions: 
+    functions:
       allowedArgumentStringValues:
         - 'three'
     tokens: null
