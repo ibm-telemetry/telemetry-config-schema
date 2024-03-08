@@ -10,3 +10,8 @@ collect:
       allowedAttributeStringValues:
         - 'one'
         - 'two'
+  js:
+    functions:
+      allowedArgumentStringValues:
+        - 'three'
+    tokens: null

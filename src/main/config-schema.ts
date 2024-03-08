@@ -70,5 +70,29 @@ export interface ConfigSchema {
         allowedAttributeStringValues?: [string, ...string[]]
       }
     }
+    /**
+     * Configuration for collecting telemetry data from JS files.
+     *
+     * @minProperties 1
+     */
+    js?: {
+      /**
+       * Enable telemetry data collection for JS tokens. The set of included tokens is
+       * determined by looking at import/require statements across analyzed source files.
+       */
+      tokens?: null
+      /**
+       * Enable telemetry data collection for JS functions. The set of included functions is
+       * determined by looking at import/require statements across analyzed source files.
+       */
+      functions?: {
+        /**
+         * Enable telemetry data collection for specific string function argument values.
+         * These are collected for all included functions.
+         * Boolean and numeric values are collected by default.
+         */
+        allowedArgumentStringValues?: [string, ...string[]]
+      }
+    }
   }
 }
