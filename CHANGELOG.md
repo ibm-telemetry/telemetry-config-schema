@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.1.0](https://github.com/ibm-telemetry/telemetry-config-schema/compare/v1.0.0...v1.1.0) (2024-03-08)
+
+
+### Features
+
+* add js scope config ([#6](https://github.com/ibm-telemetry/telemetry-config-schema/issues/6)) ([1cc8cf9](https://github.com/ibm-telemetry/telemetry-config-schema/commit/1cc8cf997f4c479b2d42bd2f9f06c936cc9b1e03))
+
+
+### Bug Fixes
+
+* update dev deps, copyrights, and scripts ([b08e442](https://github.com/ibm-telemetry/telemetry-config-schema/commit/b08e44226b9a76bf22a694a074e38af022106f99))
+
 ## [1.0.0](https://github.com/ibm-telemetry/telemetry-config-schema/compare/v0.3.0...v1.0.0) (2023-12-13)
 
 
