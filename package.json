@@ -39,7 +39,7 @@
     "clean": "rimraf dist",
     "lint": "scripts/lint",
     "lint:fix": "scripts/lint_and_fix",
-    "prepare": "husky install"
+    "prepare": "husky"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.2.0",
