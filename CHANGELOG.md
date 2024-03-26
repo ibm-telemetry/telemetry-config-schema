@@ -1,5 +1,21 @@
 # Changelog
 
+## [1.1.1](https://github.com/ibm-telemetry/telemetry-config-schema/compare/v1.1.0...v1.1.1) (2024-03-26)
+
+
+### Bug Fixes
+
+* **deps:** upgrade actions/setup-node action to v4 ([#8](https://github.com/ibm-telemetry/telemetry-config-schema/issues/8)) ([de3f19e](https://github.com/ibm-telemetry/telemetry-config-schema/commit/de3f19e56d7df0aae4623b0f0e58501bff649353))
+* **deps:** upgrade commitlint monorepo to v19 ([#9](https://github.com/ibm-telemetry/telemetry-config-schema/issues/9)) ([d5b1195](https://github.com/ibm-telemetry/telemetry-config-schema/commit/d5b119565a9a3ada02edaceea8cb8abd1cd05bad))
+* **deps:** upgrade contributor-assistant/github-action action to v2.3.2 ([#18](https://github.com/ibm-telemetry/telemetry-config-schema/issues/18)) ([4652d86](https://github.com/ibm-telemetry/telemetry-config-schema/commit/4652d8645a5b4491f9c20db4a2ebcbb821cb9a55))
+* **deps:** upgrade dependency @types/node to ^20.11.28 ([#17](https://github.com/ibm-telemetry/telemetry-config-schema/issues/17)) ([191df85](https://github.com/ibm-telemetry/telemetry-config-schema/commit/191df85bc0c320ad0729dd66e93a967a060218d4))
+* **deps:** upgrade dependency eslint-plugin-jsdoc to v48 ([#10](https://github.com/ibm-telemetry/telemetry-config-schema/issues/10)) ([c8c8083](https://github.com/ibm-telemetry/telemetry-config-schema/commit/c8c80836d2c543c8f9d5ccdfcc84a2e8c50960ef))
+* **deps:** upgrade dependency eslint-plugin-simple-import-sort to v12 ([#11](https://github.com/ibm-telemetry/telemetry-config-schema/issues/11)) ([070ef0f](https://github.com/ibm-telemetry/telemetry-config-schema/commit/070ef0feb3526023e102c279c9820eae33f7e06e))
+* **deps:** upgrade dependency husky to v9 ([#12](https://github.com/ibm-telemetry/telemetry-config-schema/issues/12)) ([486ba01](https://github.com/ibm-telemetry/telemetry-config-schema/commit/486ba012370f795192b8a117f95dffbe6e7e7d7f))
+* **deps:** upgrade devDependencies (minor) ([#15](https://github.com/ibm-telemetry/telemetry-config-schema/issues/15)) ([1e12aa0](https://github.com/ibm-telemetry/telemetry-config-schema/commit/1e12aa0aace501589f8cde47316609b042032a04))
+* **deps:** upgrade devDependencies (minor) ([#19](https://github.com/ibm-telemetry/telemetry-config-schema/issues/19)) ([3141b91](https://github.com/ibm-telemetry/telemetry-config-schema/commit/3141b91d05770361216a82c245c1a42ebed0afa9))
+* **deps:** upgrade typescript-eslint monorepo to v7 ([#14](https://github.com/ibm-telemetry/telemetry-config-schema/issues/14)) ([986c054](https://github.com/ibm-telemetry/telemetry-config-schema/commit/986c0547f2ec647f032d21fbdaad62f73b4de6cb))
+
 ## [1.1.0](https://github.com/ibm-telemetry/telemetry-config-schema/compare/v1.0.0...v1.1.0) (2024-03-08)
 
 
