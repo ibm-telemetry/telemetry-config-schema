@@ -193,7 +193,7 @@ generated output is correct before using the config file.
 
 ### JS Scope
 
-This scope applies to Javascript environments. Captures metrics for file `token` and `function`
+This scope applies to JavaScript environments. Captures metrics for file `token` and `function`
 usage. Applies to .jsx, .mjs, .js, .cjs, .tsx, .mts, .ts, .cts, .mjsx, .cjsx, .mtsx, .ctsx extension
 files.
 
