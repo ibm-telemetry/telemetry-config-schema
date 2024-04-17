@@ -52,6 +52,12 @@ collect:
         - 'large'
         - 'title1'
         - 'title2'
+  js:
+    tokens:
+    functions:
+      allowedArgumentStringValues:
+        - 'arg1'
+        - 'arg2'
 ```
 
 ## Collect schema
@@ -78,6 +84,12 @@ collect:
         - 'large'
         - 'title1'
         - 'title2'
+  js:
+    tokens:
+    functions:
+      allowedArgumentStringValues:
+        - 'arg1'
+        - 'arg2'
 ```
 
 ## Collect keys (scopes)
@@ -86,6 +98,7 @@ collect:
 | ----- | --------------------------------------------------------------------------------------------------------------- | -------- | ------ |
 | `npm` | Configuration for collecting telemetry data from an npm environment. See [NPM scope](#npm-scope) for more info. | Optional | Object |
 | `jsx` | Configuration for collecting telemetry data from JSX files. See [JSX scope](#jsx-scope) for more info.          | Optional | Object |
+| `js`  | Configuration for collecting telemetry data for tokens and functions. See [JS scope](#js-scope) for more info.  | Optional | Object |
 
 ### NPM scope
 
@@ -177,3 +190,65 @@ jsx:
 [IBM Telemetry Js Config Generator](https://www.npmjs.com/package/@ibm/telemetry-js-config-generator)
 script to automatically generate a config file with these values. Remember to verify that the
 generated output is correct before using the config file.
+
+### JS Scope
+
+This scope applies to JavaScript environments. Captures metrics for file `token` and `function`
+usage. Applies to .jsx, .mjs, .js, .cjs, .tsx, .mts, .ts, .cts, .mjsx, .cjsx, .mtsx, .ctsx extension
+files.
+
+#### `function` metric
+
+Captures function-specific usage data for the instrumented package. Specifically:
+
+- All functions exported through the instrumented package that are being used in a given project
+  that installed the package
+- Argument values passed to used functions, as determined by the `allowedArgumentStringValues`
+  config option (see below for additional information)
+- Import paths used to access the instrumented package's exported functions
+
+This data can help you answer questions such as:
+
+- What is the most widely used function/hook exported through my package?
+- What is the least widely used function/hook exported through my package?
+- What are the most commonly used arguments for a given function/hook exported through my package?
+- How many times does "project x" use my exported "name" function?
+
+By default, the `js.function` metrics will collect function names, access and import paths, and
+anonymized function arguments. The following config options allow certain additional values to be
+collected in plain text (instead of as anonymized values).
+
+- `allowedArgumentStringValues`: This is an _optional_ array of strings.
+
+  Enables plain-text collection of specific function argument string values. These are collected for
+  discovered JS functions.
+
+  _At least one value is required if this key is defined._
+
+#### `token` metric
+
+Captures token-specific usage data for the instrumented package. Specifically:
+
+- All tokens exported through the instrumented package that are being used in a given project that
+  installed the package
+- Import paths used to access the instrumented package's exported tokens
+
+This data can help you answer questions such as:
+
+- What is the most widely used token exported through my package?
+- What is the least widely used token exported through my package?
+- How many times does "project x" use my exported "name" token?
+
+By default, the `js.token` metrics will collect token names, access and import paths.
+
+### Sample:
+
+```yaml path="sample-telemetry.yml"
+---
+js:
+  tokens:
+  functions:
+    allowedArgumentStringValues:
+      - 'arg1'
+      - 'arg2'
+```
