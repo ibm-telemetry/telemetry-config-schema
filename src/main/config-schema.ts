@@ -53,7 +53,7 @@ export interface ConfigSchema {
        * Enable telemetry data collection for JSX elements. The set of included elements is
        * determined by looking at import/require statements across analyzed source files.
        */
-      elements?: {
+      elements?: null | {
         /**
          * Enable telemetry data collection for specific JSX attributes.
          * These are collected for all included JSX elements.
