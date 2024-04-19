@@ -85,7 +85,7 @@ export interface ConfigSchema {
        * Enable telemetry data collection for JS functions. The set of included functions is
        * determined by looking at import/require statements across analyzed source files.
        */
-      functions?: {
+      functions?: null | {
         /**
          * Enable telemetry data collection for specific string function argument values.
          * These are collected for all included functions.
