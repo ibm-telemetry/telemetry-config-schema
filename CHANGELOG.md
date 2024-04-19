@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/ibm-telemetry/telemetry-config-schema/compare/v1.2.0...v1.3.0) (2024-04-19)
+
+
+### Features
+
+* allow null for jsx.elements ([7bdd7e1](https://github.com/ibm-telemetry/telemetry-config-schema/commit/7bdd7e1dfaa65188339f108fc8fbcd008585fb94))
+
 ## [1.2.0](https://github.com/ibm-telemetry/telemetry-config-schema/compare/v1.1.0...v1.2.0) (2024-04-19)
 
 
