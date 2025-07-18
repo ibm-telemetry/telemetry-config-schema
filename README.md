@@ -99,6 +99,7 @@ collect:
 | `npm` | Configuration for collecting telemetry data from an npm environment. See [NPM scope](#npm-scope) for more info. | Optional | Object |
 | `jsx` | Configuration for collecting telemetry data from JSX files. See [JSX scope](#jsx-scope) for more info.          | Optional | Object |
 | `js`  | Configuration for collecting telemetry data for tokens and functions. See [JS scope](#js-scope) for more info.  | Optional | Object |
+| `wc`  | Configuration for collecting telemetry data from HTML and JSX files. See [WC scope](#wc-scope) for more info.   | Optional | Object |
 
 ### NPM scope
 
@@ -133,42 +134,6 @@ npm:
 This scope is only applicable to React packages. This scope may be useful to configure if the
 package you're instrumenting exports React components.
 
-#### `elements` metric
-
-Captures (JSX) element-specific usage data for the instrumented package. Specifically:
-
-- All elements exported through the instrumented package that are being used in a given project that
-  installed the package
-- Element configurations (attributes and values), as determined by the `allowedAttributeNames` and
-  `allowedAttributeStringValues` config options (see below for additional information)
-- Import paths used to access the instrumented package's exported elements
-
-This data can help you answer questions such as:
-
-- What is the most widely used element exported through my package?
-- What is the least widely used element exported through my package?
-- What are the most commonly used attributes for a given element exported through my package?
-- How many times does "project x" use my exported Button element?
-
-By default, the `jsx.elements` metrics will collect element names, anonymized element attribute
-names, and anonymized element attribute values. The following config options allow certain
-additional values to be collected in plain text (instead of as anonymized values).
-
-- `allowedAttributeNames`: This is an _optional_ array of strings.
-
-  Enables plain-text collection of specific JSX attribute names (prop names). These are collected
-  for all discovered JSX elements imported from the instrumented package. Additionally, boolean and
-  numeric values for these attributes will be collected in plain text.
-
-  _At least one string value is required if this key is defined._
-
-- `allowedAttributeStringValues`: This is an _optional_ array of strings.
-
-  Enables plain-text collection of specific JSX attribute string values (prop values). These are
-  collected for discovered JSX attributes included in the `allowedAttributeNames` list.
-
-  _At least one value is required if this key is defined._
-
 ### Sample:
 
 ```yaml path="sample-telemetry.yml"
@@ -185,6 +150,66 @@ jsx:
       - 'title1'
       - 'title2'
 ```
+
+### WC Scope
+
+This scope is only applicable to Web Component packages. This scope may be useful to configure if
+the package you're instrumenting exports Web Components. Applies to .jsx, .mjs, .js, .cjs, .tsx,
+.mts, .ts, .cts, .mjsx, .cjsx, .mtsx, .ctsx, .html, .htm extension files. While web components are
+mainly used within HTML files, they are designed to be framework agnostic, meaning that they can
+still be used anywhere, including JSX files.
+
+```yaml path="sample-telemetry.yml"
+---
+wc:
+  elements:
+    allowedAttributeNames:
+      - 'size'
+      - 'title'
+    allowedAttributeStringValues:
+      - 'small'
+      - 'medium'
+      - 'large'
+      - 'title1'
+      - 'title2'
+```
+
+#### `elements` metric
+
+Captures element-specific usage data for the instrumented package. This metric is used by both `jsx`
+and `wc` scopes. Specifically:
+
+- All elements exported through the instrumented package that are being used in a given project that
+  installed the package
+- Element configurations (attributes and values), as determined by the `allowedAttributeNames` and
+  `allowedAttributeStringValues` config options (see below for additional information)
+- Import paths used to access the instrumented package's exported elements
+
+This data can help you answer questions such as:
+
+- What is the most widely used element exported through my package?
+- What is the least widely used element exported through my package?
+- What are the most commonly used attributes for a given element exported through my package?
+- How many times does "project x" use my exported Button element?
+
+By default, the `jsx.elements`/`wc.elements` metrics will collect element names, anonymized element
+attribute names, and anonymized element attribute values. The following config options allow certain
+additional values to be collected in plain text (instead of as anonymized values).
+
+- `allowedAttributeNames`: This is an _optional_ array of strings.
+
+  Enables plain-text collection of specific attribute names. These are collected for all discovered
+  elements imported from the instrumented package. Additionally, boolean and numeric values for
+  these attributes will be collected in plain text.
+
+  _At least one string value is required if this key is defined._
+
+- `allowedAttributeStringValues`: This is an _optional_ array of strings.
+
+  Enables plain-text collection of specific attribute string values. These are collected for
+  discovered attributes included in the `allowedAttributeNames` list.
+
+  _At least one value is required if this key is defined._
 
 **_Note:_** You can use the
 [IBM Telemetry Js Config Generator](https://www.npmjs.com/package/@ibm/telemetry-js-config-generator)
