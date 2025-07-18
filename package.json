@@ -34,7 +34,7 @@
     "dist/"
   ],
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && build:schema",
     "build:schema": "ts-json-schema-generator --path ./src/main/config-schema.ts --type ConfigSchema > dist/config.schema.json",
     "clean": "rimraf dist",
     "lint": "scripts/lint",
