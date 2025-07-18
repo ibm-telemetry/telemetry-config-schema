@@ -198,7 +198,7 @@ additional values to be collected in plain text (instead of as anonymized values
 
 - `allowedAttributeNames`: This is an _optional_ array of strings.
 
-  Enables plain-text collection of specific attribute names (prop names). These are collected for
+  Enables plain-text collection of specific attribute names. These are collected for
   all discovered elements imported from the instrumented package. Additionally, boolean and numeric
   values for these attributes will be collected in plain text.
 
@@ -206,7 +206,7 @@ additional values to be collected in plain text (instead of as anonymized values
 
 - `allowedAttributeStringValues`: This is an _optional_ array of strings.
 
-  Enables plain-text collection of specific attribute string values (prop values). These are
+  Enables plain-text collection of specific attribute string values. These are
   collected for discovered attributes included in the `allowedAttributeNames` list.
 
   _At least one value is required if this key is defined._
