@@ -94,5 +94,27 @@ export interface ConfigSchema {
         allowedArgumentStringValues?: [string, ...string[]]
       }
     }
+    wc?: {
+      /**
+       * Enable telemetry data collection for WC elements. The set of included elements is
+       * determined by looking at import/require statements across analyzed source files.
+       */
+      elements?: null | {
+        /**
+         * Enable telemetry data collection for specific WC attributes.
+         * These are collected for all included WC elements.
+         * Specifying an `attributeName` here will turn on data collection for
+         * boolean and numeric attribute values.
+         * String value data collection is handled separately
+         * via the `allowedAttributeStringValues` key.
+         */
+        allowedAttributeNames?: [string, ...string[]]
+        /**
+         * Enable telemetry data collection for specific string attribute values.
+         * These are collected for all defined attributes in the `allowedAttributeNames` key.
+         */
+        allowedAttributeStringValues?: [string, ...string[]]
+      }
+    }
   }
 }
