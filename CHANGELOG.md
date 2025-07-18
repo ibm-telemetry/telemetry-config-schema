@@ -1,5 +1,36 @@
 # Changelog
 
+## [1.4.0](https://github.com/ibm-telemetry/telemetry-config-schema/compare/v1.3.0...v1.4.0) (2025-07-18)
+
+
+### Features
+
+* add wc scope ([#49](https://github.com/ibm-telemetry/telemetry-config-schema/issues/49)) ([e618689](https://github.com/ibm-telemetry/telemetry-config-schema/commit/e618689a6c2ead4d81cd9d206e1cb24b98470a8b))
+
+
+### Bug Fixes
+
+* **deps:** upgrade contributor-assistant/github-action action to v2.4.0 ([#31](https://github.com/ibm-telemetry/telemetry-config-schema/issues/31)) ([992ee7e](https://github.com/ibm-telemetry/telemetry-config-schema/commit/992ee7e88de8d84df38abd1544aa954a2bf76bb6))
+* **deps:** upgrade contributor-assistant/github-action action to v2.5.1 ([#42](https://github.com/ibm-telemetry/telemetry-config-schema/issues/42)) ([9552a7a](https://github.com/ibm-telemetry/telemetry-config-schema/commit/9552a7ad8d9918b1e90f0ddbcf258caccb8cb6fc))
+* **deps:** upgrade contributor-assistant/github-action action to v2.6.1 ([#45](https://github.com/ibm-telemetry/telemetry-config-schema/issues/45)) ([fce9da2](https://github.com/ibm-telemetry/telemetry-config-schema/commit/fce9da27a675ac00382a4eefff6a62a9aaa0d58b))
+* **deps:** upgrade dependency node to v20.19.4 ([#47](https://github.com/ibm-telemetry/telemetry-config-schema/issues/47)) ([a020bb7](https://github.com/ibm-telemetry/telemetry-config-schema/commit/a020bb7125f7379c9d3fcc43831ac565e629685c))
+* **deps:** upgrade devDependencies (minor) ([#27](https://github.com/ibm-telemetry/telemetry-config-schema/issues/27)) ([8f7d32d](https://github.com/ibm-telemetry/telemetry-config-schema/commit/8f7d32df203eb5dce2e3730110f50eb32a8fbd4a))
+* **deps:** upgrade devDependencies (minor) ([#29](https://github.com/ibm-telemetry/telemetry-config-schema/issues/29)) ([78732c7](https://github.com/ibm-telemetry/telemetry-config-schema/commit/78732c73a1677768643aba332c05fc6f4a652681))
+* **deps:** upgrade devDependencies (minor) ([#30](https://github.com/ibm-telemetry/telemetry-config-schema/issues/30)) ([aad35a1](https://github.com/ibm-telemetry/telemetry-config-schema/commit/aad35a1f306fcf810a33d0abc980615cdd3be069))
+* **deps:** upgrade devDependencies (minor) ([#32](https://github.com/ibm-telemetry/telemetry-config-schema/issues/32)) ([37ce3ff](https://github.com/ibm-telemetry/telemetry-config-schema/commit/37ce3ff1215553d92e441246e0edf928f3f18a33))
+* **deps:** upgrade devDependencies (minor) ([#33](https://github.com/ibm-telemetry/telemetry-config-schema/issues/33)) ([9415e26](https://github.com/ibm-telemetry/telemetry-config-schema/commit/9415e262b54bb74c59ac162cef9bf3e3bf272edb))
+* **deps:** upgrade devDependencies (minor) ([#34](https://github.com/ibm-telemetry/telemetry-config-schema/issues/34)) ([d2d953a](https://github.com/ibm-telemetry/telemetry-config-schema/commit/d2d953abbc0fd7b8ce4628fe82189c6c3e1f97f6))
+* **deps:** upgrade devDependencies (minor) ([#35](https://github.com/ibm-telemetry/telemetry-config-schema/issues/35)) ([438e55f](https://github.com/ibm-telemetry/telemetry-config-schema/commit/438e55f879c83cdab3ee3b869a96310021e9c090))
+* **deps:** upgrade devDependencies (minor) ([#36](https://github.com/ibm-telemetry/telemetry-config-schema/issues/36)) ([beee9bc](https://github.com/ibm-telemetry/telemetry-config-schema/commit/beee9bce1f24115616ff527f9111d7f4b8333d68))
+* **deps:** upgrade devDependencies (minor) ([#37](https://github.com/ibm-telemetry/telemetry-config-schema/issues/37)) ([2ca8050](https://github.com/ibm-telemetry/telemetry-config-schema/commit/2ca80504b6364a4ca6e48c021cbbafb898b75f40))
+* **deps:** upgrade devDependencies (minor) ([#38](https://github.com/ibm-telemetry/telemetry-config-schema/issues/38)) ([5546419](https://github.com/ibm-telemetry/telemetry-config-schema/commit/5546419b608ad0e4e9b0f2d16ec89c010c40c1dc))
+* **deps:** upgrade devDependencies (minor) ([#39](https://github.com/ibm-telemetry/telemetry-config-schema/issues/39)) ([4701054](https://github.com/ibm-telemetry/telemetry-config-schema/commit/4701054a2b475197e80842bdda49c538c9275a0c))
+* **deps:** upgrade devDependencies (minor) ([#40](https://github.com/ibm-telemetry/telemetry-config-schema/issues/40)) ([9683823](https://github.com/ibm-telemetry/telemetry-config-schema/commit/96838238e9b45b45217d3e5d8be2c7ee619b69a4))
+* **deps:** upgrade devDependencies (minor) ([#41](https://github.com/ibm-telemetry/telemetry-config-schema/issues/41)) ([70269be](https://github.com/ibm-telemetry/telemetry-config-schema/commit/70269beae7e9d8cf4e13f036d235b53594f63913))
+* **deps:** upgrade devDependencies (minor) ([#43](https://github.com/ibm-telemetry/telemetry-config-schema/issues/43)) ([ebc082f](https://github.com/ibm-telemetry/telemetry-config-schema/commit/ebc082f883a3be21211605c383009f08e6cb3846))
+* **deps:** upgrade devDependencies (minor) ([#44](https://github.com/ibm-telemetry/telemetry-config-schema/issues/44)) ([6f43290](https://github.com/ibm-telemetry/telemetry-config-schema/commit/6f432907b1886f611f88ab974cd5d629490d28a1))
+* **deps:** upgrade devDependencies (minor) ([#46](https://github.com/ibm-telemetry/telemetry-config-schema/issues/46)) ([8391495](https://github.com/ibm-telemetry/telemetry-config-schema/commit/8391495fe9c7cc28f25593f4a593286f96d6264b))
+
 ## [1.3.0](https://github.com/ibm-telemetry/telemetry-config-schema/compare/v1.2.0...v1.3.0) (2024-04-19)
 
 
