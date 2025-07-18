@@ -15,3 +15,8 @@ collect:
       allowedArgumentStringValues:
         - 'three'
     tokens: null
+  wc:
+    elements:
+      allowedAttributeStringValues:
+        - 'one'
+        - 'two'
