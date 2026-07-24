@@ -44,22 +44,22 @@
   "devDependencies": {
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
-    "@types/node": "^20.19.8",
+    "@types/node": "^20.19.43",
     "@typescript-eslint/eslint-plugin": "^7.18.0",
     "@typescript-eslint/parser": "^7.18.0",
     "eslint": "^8.57.1",
     "eslint-plugin-eslint-comments": "^3.2.0",
     "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-jsdoc": "^48.11.0",
-    "eslint-plugin-n": "^17.21.0",
+    "eslint-plugin-n": "^17.24.0",
     "eslint-plugin-notice": "^0.9.10",
     "eslint-plugin-promise": "^6.6.0",
     "eslint-plugin-simple-import-sort": "^12.1.1",
     "husky": "^9.1.7",
     "lint-staged": "^15.5.2",
-    "prettier": "^3.6.2",
+    "prettier": "^3.9.6",
     "rimraf": "^5.0.10",
     "ts-json-schema-generator": "^1.5.1",
-    "typescript": "^5.8.3"
+    "typescript": "^5.9.3"
   }
 }
