@@ -121,6 +121,13 @@ export interface ConfigSchema {
          * These are collected for all defined attributes in the `allowedAttributeNames` key.
          */
         allowedAttributeStringValues?: [string, ...string[]]
+        /**
+         * Enable telemetry data collection for specific object sub-keys of complex-valued
+         * WC attributes. When an attribute value is an object, the keys listed here will
+         * be individually tracked (as `attributeName.subKey`) rather than the whole object
+         * being anonymized as a single value.
+         */
+        allowedAttributeObjectKeys?: [string, ...string[]]
       }
     }
   }
