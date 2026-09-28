@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.5.0](https://github.com/ibm-telemetry/telemetry-config-schema/compare/v1.4.0...v1.5.0) (2026-09-28)
+
+
+### Features
+
+* allow attribute object keys ([#55](https://github.com/ibm-telemetry/telemetry-config-schema/issues/55)) ([591a777](https://github.com/ibm-telemetry/telemetry-config-schema/commit/591a7775899f60e17c6e1009e21b24d3b5990d9a))
+
+
+### Bug Fixes
+
+* forgot npm run ([2a90a6c](https://github.com/ibm-telemetry/telemetry-config-schema/commit/2a90a6c42dd8fa369a2b8bce56e60cc8629224df))
+* running build also runs schema gen ([9a1ddd0](https://github.com/ibm-telemetry/telemetry-config-schema/commit/9a1ddd041d4cf787f3a1d6d1495d002f93c9b4bb))
+
 ## [1.4.0](https://github.com/ibm-telemetry/telemetry-config-schema/compare/v1.3.0...v1.4.0) (2025-07-18)
 
 
